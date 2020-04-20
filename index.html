@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Photo Booth</title>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='main.css' type='textt/css' media='all'>
+    <script src='capture.js'></script>
+</head>
+
+<body>
+    <div class="content-area">
+        <h1>Photo Booth</h1>
+        <!-- Left side Video stream -->
+        <div class="camera">
+            <video id="video">Video stream Not available</video>
+            <button id="startbutton">Take Photo</button>
+        </div>
+        <!-- Right side Display capture frame -->
+        <canvas id="canvas">
+
+        </canvas>
+        <div class="output">
+            <img id="photo" alt="The screen capture will appear here">
+        </div>
+    </div>
+
+</body>
