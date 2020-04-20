@@ -1,4 +1,4 @@
-#video{
+#video {
     border: 1px solid black;
     box-shadow: 2px 2px 3px black;
     width: 320px;
@@ -40,7 +40,7 @@
     color: rgba(255, 255, 255, 1.0);
 }
 
-.contentarea {
+.content-area {
     font-size: 16px;
     font-family: "Lucinda Grande", "Arial", sans-serif;
     width: 760 px;
