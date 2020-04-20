@@ -5,8 +5,8 @@
     var width = 320;
     var height = 0;
 
-    // isStreaming tells us if we are currently streaming
-    var isStreaming = false;
+    // streaming tells us if we are currently streaming
+    var streaming = false;
 
     // Configure HTML elements
 
@@ -31,7 +31,7 @@
         });
 
         video.addEventListener('canplay', function(ev){
-            if(!isStreaming) {
+            if(!streaming) {
                 height = video.videoHeight / (video.videoWidth/width);
 
                 // Address Firefox bug : It cannot determine height from the video. If this happens
@@ -44,8 +44,13 @@
                 
                 canvas.setAttribute('Width', width);
                 canvas.setAttribute('Height', height);
-                isStreaming = true;
+                streaming = true;
             }
+        }, false);
+
+        startbutton.addEventListener('click', function(ev){
+            takepicture();
+            ev.preventDefault();
         }, false);
 
         clearphoto();
